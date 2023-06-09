@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./section-card.component.scss'],
 })
 export class SectionCardComponent implements OnInit {
-  @Input() public sections;
+  @Input() public sections = null;
   @Output() public urlString = new EventEmitter<string>();
 
   constructor() {}
