@@ -1,0 +1,16 @@
+<app-header [title]="'Episodes'"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item
+      *ngFor="let episode of episodesList; let i = index;"
+      (click)="selectedEpisode(episode)"
+    >
+      <ion-badge slot="start">{{i+1}}</ion-badge>
+      <ion-label>
+        <h2>{{episode.name}}</h2>
+        <p>{{episode.episode}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
